@@ -1,0 +1,18 @@
+no,nama,jabatan,tanggal_masuk,kode_kantor,email,nomor_telepon,alamat,scopes
+1,Moh. Sholeh,pimpinan,10/07/2017 23:59,1709.0002,sholeh@gmail.com,08482948299,Pandaan,manage_pengajuan|manage_permohonan|manage_survei|manage_analisa|manage_keputusan|manage_realisasi
+2,Sujoko Wari,kabag_kredit,10/07/2017 23:59,1709.0002,sujoko@gmail.com,08482948291,Pandaan,manage_pengajuan|manage_permohonan|manage_survei|manage_analisa|manage_realisasi
+3,Agus Muhyiddin,kabag_marketing,10/07/2017 23:59,1709.0002,agus@gmail.com,08482948290,Pandaan,manage_pengajuan|manage_permohonan
+4,David Siswanto,kabag_kolektor,10/07/2017 23:59,1709.0002,david@gmail.com,08482948292,Pandaan,manage_pengajuan|manage_permohonan
+5,Warsini,kabag_operasional,10/07/2017 23:59,1709.0002,warsini@gmail.com,08482948293,Pandaan,manage_pengajuan|manage_permohonan|manage_survei
+6,Galih Hari Murti,analis_kredit,10/07/2017 23:59,1709.0002,galih@gmail.com,08482948294,Pandaan,manage_pengajuan|manage_permohonan|manage_survei|manage_analisa
+7,Sukir,marketing,10/07/2017 23:59,1709.0002,sukir@gmail.com,08482948295,Pandaan,manage_pengajuan|manage_permohonan
+8,M. Sayihuddin,marketing,10/07/2017 23:59,1709.0002,sayihuddin@gmail.com,084829482996,Pandaan,manage_pengajuan|manage_permohonan
+9,Dibyo,kolektor,10/07/2017 23:59,1709.0002,dibyo@gmail.com,08482948297,Pandaan,manage_pengajuan|manage_permohonan
+10,Ibadir,kolektor,10/07/2017 23:59,1709.0002,ibadir@gmail.com,08482948298,Pandaan,manage_pengajuan|manage_permohonan
+11,Nurul,kolektor,10/07/2017 23:59,1709.0002,nurul@gmail.com,08482948219,Pandaan,manage_pengajuan|manage_permohonan
+12,Lusi,accounting_dan_tabungan,10/07/2017 23:59,1709.0002,lusi@gmail.com,08482948218,Pandaan,manage_realisasi
+13,Meitha Kartika,admin_angsuran,10/07/2017 23:59,1709.0002,meitha@gmail.com,08482948217,Pandaan,manage_realisasi
+14,Rinanda Jusika,admin_collect,10/07/2017 23:59,1709.0002,rinanda@gmail.com,08482948216,Pandaan,manage_realisasi
+15,Nuril H,admin_angsuran,10/07/2017 23:59,1709.0002,nuril@gmail.com,08482948215,Pandaan,manage_realisasi
+16,Sholihah,teller,10/07/2017 23:59,1709.0002,sholihah@gmail.com,08482948214,Pandaan,manage_realisasi
+17,Dimas,bagian_umum,10/07/2017 23:59,1709.0002,dimas@gmail.com,08482948211,Pandaan,manage_realisasi

@@ -1,0 +1,53 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700|Quicksand');
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+@import "flatpickr.css";
+// @import "plugins/select2-bootstrap";
+
+// HTML & BODY
+html, body {}
+
+// Typography
+.text-decorative { font-family: 'Lato', sans-serif !important; font-weight:100 !important;}
+.text-style { font-family: 'Quicksand', sans-serif !important; }
+
+// Nav
+.navbar.main { 
+	.nav-item { @extend .py-0; @extend .rounded; }
+	.nav-item.active { background:$gray-100; }
+}
+
+// Cursor
+.btn { cursor:pointer !important; }
+
+// Social Media Color
+.bg-facebook { background: #3b5999 ; color: #fff !important; }
+.bg-twitter { background: #55acee ; color: #fff !important; }
+.bg-instagram { background: #e4405f ; color: #fff !important; }
+
+// Card
+.card { 
+	overflow:hidden; 
+	* {
+		// @extend .mw-100;
+	}
+}
+
+// background
+.bg-shadow {
+	-webkit-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .05) !important;
+	-moz-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .05) !important;
+	-o-box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .05) !important;
+	box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, .05) !important;
+}
+
+// Cursor
+a, button { cursor:pointer !important; outline: none !important;}
+
+.border-input { border-bottom: 2px solid $gray-400 !important; }
