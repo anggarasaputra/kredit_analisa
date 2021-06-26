@@ -46,19 +46,19 @@ class PengajuanTableSeeder extends Seeder
 		$pekerjaan 	= ['karyawan_swasta', 'wiraswasta', 'pegawai_negeri', 'tni', 'polri', 'belum_bekerja'];
 
 		$foto 		= 	[
-			'http://rumahpengaduan.com/wp-content/uploads/2015/02/KTP.jpg',
-			'https://pbs.twimg.com/media/BwlhnFOCQAAvDGp.jpg',
-			'https://pbs.twimg.com/media/A_Cc4keCAAAAP-2.jpg',
-			'https://balyanurmd.files.wordpress.com/2013/12/ktp-masa-depan.jpg',
-			'https://pbs.twimg.com/media/BXjQAxjIEAAVhox.jpg',
+			'https://1.bp.blogspot.com/-IUn1e3lRtVU/WCMI8GBq55I/AAAAAAAAC44/O4w6YhGYD6YK7mvzuMWkTpU661sNtL7YwCEw/s1600/KTP.jpeg',
+			'https://1.bp.blogspot.com/-IUn1e3lRtVU/WCMI8GBq55I/AAAAAAAAC44/O4w6YhGYD6YK7mvzuMWkTpU661sNtL7YwCEw/s1600/KTP.jpeg',
+			'https://1.bp.blogspot.com/-IUn1e3lRtVU/WCMI8GBq55I/AAAAAAAAC44/O4w6YhGYD6YK7mvzuMWkTpU661sNtL7YwCEw/s1600/KTP.jpeg',
+			'https://1.bp.blogspot.com/-IUn1e3lRtVU/WCMI8GBq55I/AAAAAAAAC44/O4w6YhGYD6YK7mvzuMWkTpU661sNtL7YwCEw/s1600/KTP.jpeg',
+			'https://1.bp.blogspot.com/-IUn1e3lRtVU/WCMI8GBq55I/AAAAAAAAC44/O4w6YhGYD6YK7mvzuMWkTpU661sNtL7YwCEw/s1600/KTP.jpeg',
 		];
 
 		$kk 		= 	[
-			'https://www.lapor.go.id/images/stream/8abb1c77577392d48d9c4c9f81cecd3f.jpg',
-			'http://3.bp.blogspot.com/-vEZuGYwBWqc/VkA4avQYhMI/AAAAAAAAAGg/-5dZ2L0rF04/s1600/Kartu-Keluarga.jpg',
-			'http://sid.sidoarjokab.go.id/tulangan-tulangan/assets/files/artikel/sedang_1471592254ksk.JPG',
-			'http://2.bp.blogspot.com/-TEYKgyEzn60/VS-wFtO8XjI/AAAAAAAAKZI/U_Fg3PvrHks/w1200-h630-p-k-no-nu/kk-eri-kurniawan.jpg',
-			'https://i1.wp.com/www.azzhura.com/wp-content/uploads/2015/11/kartu-keluarga.jpg',
+			'https://pakel-pule.trenggalekkab.go.id/assets/files/artikel/sedang_1505280961index.jpg',
+			'https://pakel-pule.trenggalekkab.go.id/assets/files/artikel/sedang_1505280961index.jpg',
+			'https://pakel-pule.trenggalekkab.go.id/assets/files/artikel/sedang_1505280961index.jpg',
+			'https://pakel-pule.trenggalekkab.go.id/assets/files/artikel/sedang_1505280961index.jpg',
+			'https://pakel-pule.trenggalekkab.go.id/assets/files/artikel/sedang_1505280961index.jpg',
 		];
 		
 		$hubungan		= ['orang_tua', 'suami', 'istri', 'anak'];
@@ -126,18 +126,19 @@ class PengajuanTableSeeder extends Seeder
 			$nasabah['keluarga'][0]['nik']		= '35-73-03-'.rand(100000,710000).'-000'.rand(1,4);
 			$nasabah['keluarga'][0]['telepon']	= $faker->phoneNumber;
 
-			$dokumen_pelengkap 				= ['ktp' => $foto[rand(0,4)], 'kk' => $kk[rand(0,4)]];
+			$dokumen_pelengkap 	= ['ktp' => $foto[rand(0,4)], 'kk' => $kk[rand(0,4)]];
 
 			if($mobile)
 			{
 				$nip_ao 		= ['nip' => Orang::first()['nip'], 'nama' => Orang::first()['nama']];
 				// $nasabah 		= [];
 				// $nasabah['telepon']	= $faker->phoneNumber;
-				$dokumen_pelengkap 	= ['ktp' => $foto[rand(0,4)]];
+				$dokumen_pelengkap 	= ['ktp' => $foto[rand(0,4)], 'kk' => $kk[rand(0,4)]];
 			}
 			elseif(rand(1,1))
 			{
 				$nip_ao 		= ['nip' => Orang::first()['nip'], 'nama' => Orang::first()['nama']];
+				$dokumen_pelengkap 	= ['ktp' => $foto[rand(0,4)], 'kk' => $kk[rand(0,4)]];
 			}
 
 			$data 	= [
@@ -147,8 +148,8 @@ class PengajuanTableSeeder extends Seeder
 				'ao'				=> $nip_ao,
 				'kode_kantor'		=> Kantor::whereIn('jenis', ['koperasi', 'bpr'])->first()['id'],
 				'nasabah'			=> $nasabah,
-				'dokumen_pelengkap'	=> $dokumen_pelengkap,
 			];
+
 
 			$pengajuan 	= Pengajuan::create($data);
 			$status 	= Status::where('pengajuan_id', $pengajuan['id'])->orderby('created_at', 'desc')->first();
